@@ -34,3 +34,17 @@ exports.createEvent = async function (req, res) {
     res.status(500).send({ message: "Error creating event.", error });
   }
 };
+
+// exports.createEvent = async function (req, res) {
+//   try {
+//     const newEvent = req.body;
+//     const event = new Event({
+//       ...newEvent,
+//     });
+//     await event.save();
+//     res.send({ message: "New event inserted." });
+//   } catch {
+//     console.error("Error creating event:", error);
+//     res.status(500).send({ message: "Error creating event.", error });
+//   }
+// };

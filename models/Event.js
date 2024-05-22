@@ -2,10 +2,16 @@ const mongoose = require('mongoose')
 
 const eventSchema = new mongoose.Schema({
     name: String, 
+    date: Date,
+    // time: String,
+    category: String,
     country: String, 
-    price: Number, 
     image: String, 
-    category: String
+    price: Number, 
+    overview: String,
+    onTheDay: String,
+    refund: String,
+    guidelines: String
 })
 
 module.exports.Event = mongoose.model('Event', eventSchema)

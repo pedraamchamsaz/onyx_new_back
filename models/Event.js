@@ -1,8 +1,9 @@
 const mongoose = require('mongoose') 
 
 const eventSchema = new mongoose.Schema({
-    name: String, 
+    name: String,
     date: Date,
+    userId: String,
     // time: String,
     category: String,
     country: String, 
@@ -11,7 +12,8 @@ const eventSchema = new mongoose.Schema({
     overview: String,
     onTheDay: String,
     refund: String,
-    guidelines: String
+    guidelines: String,
+    createdBy: String
 })
 
 module.exports.Event = mongoose.model('Event', eventSchema)
